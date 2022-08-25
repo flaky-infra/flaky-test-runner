@@ -31,10 +31,11 @@ type TestEndMessage struct {
 }
 
 type TestFailures struct {
-	XMLName   xml.Name   `json:"-" xml:"testfailures"`
-	Text      string     `json:"-" xml:",chardata"`
-	Duration  string     `json:"duration" xml:"duration,attr"`
-	TestCases []TestCase `json:"testCases" xml:"testcase"`
+	XMLName           xml.Name   `json:"-" xml:"testfailures"`
+	Text              string     `json:"-" xml:",chardata"`
+	Duration          string     `json:"duration" xml:"duration,attr"`
+	IsWarmupExecution string     `json:"isWarmupExecution" xml:"isWarmupExecution,attr"`
+	TestCases         []TestCase `json:"testCases" xml:"testcase"`
 }
 
 type TestCase struct {
